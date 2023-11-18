@@ -36,4 +36,4 @@ https://www.google.co.jp/maps/place/%E5%BB%BA%E4%BB%81%E5%AF%BA/@35.0002898,135.
 ```
 
 ## 最適化
-[TripOpt_Appのページ](https://tripopt2023.streamlit.app/)
+[TripOpt_Appのページ](https://tripopt-2023.streamlit.app/)
