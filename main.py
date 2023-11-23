@@ -313,3 +313,13 @@ if st.sidebar.button("Optimization"):
             st.components.v1.html(folium.Figure().add_child(b).render(), height=500)
     else:
         st.sidebar.write("Required items are missing")
+        
+
+from PIL import Image
+
+image = Image.open('ぉご.png')
+st.set_page_config(
+    page_title="TripOpt TripY", 
+    page_icon=image, 
+    layout="wide"
+    )
