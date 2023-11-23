@@ -283,7 +283,6 @@ class VisualizationMap:
             popup=self.location_time.iloc[0,0]
         ).add_to(my_map)
 
-        #最後日に赤ルートならばどの順番で回っても大丈夫
         
         return my_map
 
