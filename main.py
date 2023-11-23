@@ -320,6 +320,5 @@ from PIL import Image
 image = Image.open('ぉご.png')
 st.set_page_config(
     page_title="TripOpt TripY", 
-    page_icon=image, 
-    layout="wide"
+    page_icon=image
     )
