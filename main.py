@@ -292,7 +292,8 @@ from PIL import Image
 image = Image.open('logo.png')
 st.set_page_config(
     page_title="TripOpt_TripY", 
-    page_icon=image
+    page_icon=image,
+    initial_sidebar_state="expanded"
     )
 
 
