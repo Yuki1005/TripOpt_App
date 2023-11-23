@@ -287,6 +287,15 @@ class VisualizationMap:
         return my_map
 
 
+from PIL import Image
+
+image = Image.open('ぉご.png')
+st.set_page_config(
+    page_title="TripOpt TripY", 
+    page_icon=image
+    )
+
+
 st.text("TripOpt_TripY")
 st.title("旅行の予定を OpenRouteService を用いて Python から最適化する")
 OSM_key = st.sidebar.text_input("OpenRouteService API")
@@ -313,12 +322,3 @@ if st.sidebar.button("Optimization"):
             st.components.v1.html(folium.Figure().add_child(b).render(), height=500)
     else:
         st.sidebar.write("Required items are missing")
-        
-
-from PIL import Image
-
-image = Image.open('ぉご.png')
-st.set_page_config(
-    page_title="TripOpt TripY", 
-    page_icon=image
-    )
