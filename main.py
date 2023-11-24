@@ -335,6 +335,5 @@ if st.sidebar.button("Optimization"):
             "text/csv",
             key='download-csv'
             )
-            
     else:
         st.sidebar.write("Required items are missing")
