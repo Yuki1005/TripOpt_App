@@ -286,6 +286,8 @@ class VisualizationMap:
         
         return my_map
 
+def convert_df(df):
+   return df.to_csv(index=False).encode('shift-jis')
 
 from PIL import Image
 
@@ -321,5 +323,16 @@ if st.sidebar.button("Optimization"):
             st.header("Route-Map")
             b = VisualizationMap(geo=pos_text,key=OSM_key,lim_time=time_day,method_num=method_num).map()
             st.components.v1.html(folium.Figure().add_child(b).render(), height=500)
+        
+        csv = convert_df(pd.DataFrame(a))
+        
+        if "Schedule" in check:
+            st.download_button(
+            "Press to Download",
+            csv,
+            "file.csv",
+            "text/csv",
+            key='download-csv'
+            )
     else:
         st.sidebar.write("Required items are missing")
