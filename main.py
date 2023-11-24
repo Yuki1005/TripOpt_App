@@ -319,18 +319,19 @@ if st.sidebar.button("Optimization"):
             st.header("Schedule")
             a = Optimization(geo=pos_text,key=OSM_key,lim_time=time_day,method_num=method_num).schedule()
             st.write(pd.DataFrame(a))
+            
         if "Route-Map" in check:
             st.header("Route-Map")
             b = VisualizationMap(geo=pos_text,key=OSM_key,lim_time=time_day,method_num=method_num).map()
             st.components.v1.html(folium.Figure().add_child(b).render(), height=500)
         
-        csv = convert_df(pd.DataFrame(a))
-        
+        st.header("Download")
         if "Schedule" in check:
+            csv = convert_df(pd.DataFrame(a))
             st.download_button(
-            "Press to Download",
+            "Press to Download Schedule",
             csv,
-            "file.csv",
+            "Schedule.csv",
             "text/csv",
             key='download-csv'
             )
