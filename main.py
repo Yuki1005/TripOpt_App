@@ -288,8 +288,9 @@ class VisualizationMap:
 
 
 # class Both:
-#     def aaa():
+#     def schedule_map():
 #         print("a")
+#         return schedule,map
 
 def convert_df(df):
    return df.to_csv(index=False).encode('shift-jis')
