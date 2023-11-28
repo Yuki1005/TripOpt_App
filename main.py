@@ -286,6 +286,11 @@ class VisualizationMap:
         
         return my_map
 
+
+# class Both:
+#     def aaa():
+#         print("a")
+
 def convert_df(df):
    return df.to_csv(index=False).encode('shift-jis')
 
