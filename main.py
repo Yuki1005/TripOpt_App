@@ -325,7 +325,16 @@ if st.sidebar.button("Optimization"):
             b = VisualizationMap(geo=pos_text,key=OSM_key,lim_time=time_day,method_num=method_num).map()
             st.components.v1.html(folium.Figure().add_child(b).render(), height=500)
         
-
+        # if "Schedule" in check:
+        #     st.header("Download")
+        #     csv = convert_df(pd.DataFrame(a))
+        #     st.download_button(
+        #     "Press to Download Schedule",
+        #     csv,
+        #     "Schedule.csv",
+        #     "text/csv",
+        #     key='download-csv'
+        #     )
             
     else:
         st.sidebar.write("Required items are missing")
