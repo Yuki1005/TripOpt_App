@@ -551,6 +551,7 @@ st.set_page_config(
 
 st.text("TripOpt_TripY")
 st.title("旅行の予定を OpenRouteService を用いて Python から最適化する")
+st.text("※RUNNINGが停止しても結果が表示されない場合は一日に使える時間を検討しなおしてください.")
 OSM_key = st.sidebar.text_input("OpenRouteService API")
 time_day = st.sidebar.slider("Time Limit(Hours)", 0, 24, 8)*60*60
 method_num = st.sidebar.radio("Transportation", ("🚶：Foot-Walking", "🚙：Driving-Car"))
