@@ -1,4 +1,4 @@
-# Itinerary Optomization package for Python
+# Itinerary Optomization Application for Python
 旅行の予定を [openrouteservice](https://openrouteservice.org/) を用いて Python から最適化するためのアプリケーションです。
 
 # 使い方
